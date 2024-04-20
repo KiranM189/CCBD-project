@@ -53,4 +53,5 @@ while True:
     scraped_data = scrape_articles()
     save_to_csv(scraped_data)
     print("Data scraped and saved to scraped_articles.csv. Word count is ", get_data(TARGET_URL))
+  connectionSocket.close()
 
