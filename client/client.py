@@ -13,7 +13,8 @@ clientSocket.connect((serverName,serverPort))
 
 URL = input("Input the URL:")
 clientSocket.send(URL.encode()) 
-clientSocket.close()
-
-df = pd.read_csv("shared-data/scraped_articles.csv")
+Message = clientSocket.recv(1024)
+print(Message.decode())
+df=pd.read_csv("shared-data/scraped_articles.csv")
 print(df)
+clientSocket.close()
